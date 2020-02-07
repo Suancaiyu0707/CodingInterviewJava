@@ -1,6 +1,5 @@
 package com.xuzf;
 
-import javax.swing.tree.TreeNode;
 
 /**
  * Created with IntelliJ IDEA.
