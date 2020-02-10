@@ -15,7 +15,9 @@ import java.util.Collections;
 public class StringPermutation {
 
     public static void main( String[] args ) {
+
         String str = "abce";
+
         System.out.println(Permutation(str));
     }
 
