@@ -1,7 +1,5 @@
 package com.xuzf;
 
-import sun.jvm.hotspot.ui.action.FindAction;
-
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
