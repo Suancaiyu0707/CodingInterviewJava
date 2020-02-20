@@ -8,7 +8,7 @@ package com.xuzf;
  * Description: No Description
  */
 public class MyLinkedList {
-    private ListNode head;
+    public ListNode head;
 
     public MyLinkedList(){
         this.head = null;
