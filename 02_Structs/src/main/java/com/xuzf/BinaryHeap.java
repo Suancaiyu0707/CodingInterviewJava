@@ -9,6 +9,7 @@ import java.util.Arrays;
  * Time: 2:06 PM
  * Description: No Description
  * 二叉堆（二叉堆是一个完全二叉树）
+ * 最后一个非叶子节点的索引下标：(array.length-2)
  */
 public class BinaryHeap {
     static Integer[] heap =new Integer[16];
@@ -26,7 +27,7 @@ public class BinaryHeap {
         add(6);
         add(8);
         add(1);
-
+        System.out.println();
         remove();
         remove();
         remove();
@@ -34,6 +35,9 @@ public class BinaryHeap {
         remove();
         remove();
         remove();
+        System.out.println();
+        //重建最小堆
+        buildHeap(new Integer[]{7,1,3,10,5,2,8,9,6});
     }
 
     /***
@@ -72,7 +76,7 @@ public class BinaryHeap {
             return ;
         }
         //把完全二叉树的最后一个元素放到头节点上
-        System.out.println(heap[0]);
+        System.out.print(heap[0]+"-->");
         heap[0]=heap[size-1];
         heap[size-1]=null;
         size--;
@@ -149,6 +153,22 @@ public class BinaryHeap {
                 heap[minChildIndex]=temp;
                 index=minChildIndex;
             }
+        }
+    }
+
+    /**
+     * 最后一个非叶子节点的索引下标：(array.length-2)
+     * @param sources
+     */
+    public static void buildHeap(Integer [] sources){
+        size=sources.length;
+        for(int i=(sources.length-2)/2;i>=0;i--){
+            downNode(sources,i);
+        }
+        heap=sources;
+        int len=size;
+        for(int i=0;i<len;i++){
+            remove();
         }
     }
 
