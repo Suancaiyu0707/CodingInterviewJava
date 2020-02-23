@@ -1,7 +1,5 @@
 package com.xuzf.sort;
 
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
