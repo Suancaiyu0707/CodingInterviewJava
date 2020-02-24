@@ -70,15 +70,41 @@ public class BubbleSort {
     public void sort3(int [] sources){
         int chargeIndex = sources.length-1;
         for(int i=chargeIndex;i>0;i=chargeIndex){
+            boolean isSorted=false;
             for(int j=0;j<i;j++) {
                 if (sources[j] > sources[j + 1]) {
                     sources[j] = sources[j] ^ sources[j + 1];
                     sources[j + 1] = sources[j] ^ sources[j + 1];
                     sources[j] = sources[j] ^ sources[j + 1];
                     chargeIndex = j;
+                    isSorted=true;
+                }
+            }
+            if(!isSorted){
+                break;
+            }
+        }
+    }
+
+    //终极版
+    public static void sort4(int[] num){
+        int i,j,temp;
+        boolean flag=true;
+        for(i=0;i<num.length&&flag;i++){
+            flag=false;
+            for(j=num.length-1;j>i;j--){
+                if (num[j-1]>num[j]) {
+                    temp=num[j-1];
+                    num[j-1]=num[j];
+                    num[j]=temp;
+                    flag=true;
                 }
             }
         }
+        for (int k : num) {
+            System.out.println(k);
+        }
+
     }
     public static void main(String args[]){
         int[] num={5,8,6,3,9,2,1,7};
