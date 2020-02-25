@@ -13,9 +13,9 @@ public class Print1ToMaxOfNDigits {
 
     public static boolean flag =true;
     public static void main( String[] args ) {
-//        printToMaxOfNDigits(2);
+        printToMaxOfNDigits(2);
 //        printnew(2);
-        printToMaxOfDigits2(3);
+//        printToMaxOfDigits2(3);
     }
     /***
      * 位数
