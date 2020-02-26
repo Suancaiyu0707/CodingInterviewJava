@@ -18,6 +18,16 @@ public class NumericStrings2 {
      *  数字的基本格式为：(A.B E/e A) ,按顺序进行判断
      *  //A代表带符号整数，B代表不带符号整数
      *  小心：时刻要注意数组越界问题！
+     *
+     *
+     *  1、判断整数部分A,并记录A的范围索引
+     *  2、判断A后，判断下一个字符是小数点或者E
+     *      如果下一位是小数点，则份两种情况：
+     *          小数点后面跟着数字，则小数点前面的A可以是数值，也可以为空
+     *          小数点后面没跟着数字，则小数点前面的A必须是数值
+     *  3、判断完小数点，判断E或者e,
+     *      如果下一位是e的话，则前面是可以A.B或者A或者.B,但是必须有值，且是数值
+     *      然后判断e之后必须全是数字
      */
 
     public boolean isNumeric(char[] str) {
@@ -27,13 +37,11 @@ public class NumericStrings2 {
         index[0] = 0; // 用于记录当前字符位置
         // 先判断A
         boolean isNumeric; //用于记录是否满足条件
-        //判断整数部分是否以数值开头(带正负号的也可以)
+        //判断整数部分是否以数值开头(带正负号的也可以)，比记录整数部份数字到哪个索引位置了
         isNumeric = isInteger(str, index);
-        // 判断B 也就是整数的下一位是否不是小数点
+        // 判断B
         if (index[0] < str.length && (str[index[0]] == '.')) {
             index[0]++;
-            //判断小数点后是不是跟着数值
-            //如果小数点后面没有跟着数值的话，则必须包含整数部分，也就是A.
             isNumeric = isUnsignedInteger(str, index)
                     || isNumeric; // .B和A.和A.B形式均可以
         }

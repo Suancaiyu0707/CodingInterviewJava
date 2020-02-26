@@ -1,5 +1,7 @@
 package com.xuzf;
 
+import java.util.regex.Pattern;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
@@ -59,17 +61,50 @@ public class RegularExpressionsMatching2 {
          */
         //如果下一个字符是'*'
         if(indexOfPattern<pattern.length-1&&'*'==pattern[indexOfPattern+1]){
-            //如果模式中的当前字符是一样的
-            if((indexOfStr < str.length&&pattern[indexOfPattern]==str[indexOfStr])
-                    ||(indexOfStr < str.length && pattern[indexOfPattern] == '.')){
-                return
-                        matchCore(str,indexOfStr+1,pattern,indexOfPattern+2)//ab和ab,所以这里会先把*代表1个来递归
-                        ||matchCore(str,indexOfStr+1,pattern,indexOfPattern)//aaab和a*b。走到这边，说明*代表1不好使，要代表多个
-                        ||matchCore(str,indexOfStr,pattern,indexOfPattern+2);//*被当成0来对待
-            }else {
+            boolean isMatch = true;
+            if((indexOfStr<str.length)&&str[indexOfPattern]==str[indexOfStr]){
+                // 如果 * 号代表1
+                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern+2);
+                if(!isMatch){
+                    //*号代表0
+                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
+                }
+                if(!isMatch){
+                    //*号代表多个，比如代表n的话，那它就是n=1+(n-1)
+                    isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern);
+                }
+                return isMatch;
+            }else if(indexOfStr<str.length&&pattern[indexOfPattern] == '.'){//如果pattern当前位置是 .
+                // 如果 * 号代表1
+                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern+2);
+                if(!isMatch){
+                    //*号代表0
+                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
+                }
+                if(!isMatch){
+                    //*号代表0
+                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
+                }
+                //*号代表多个，比如代表n的话，那它就是n=1+(n-1)
+                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern);
+                return isMatch;
+            }else{//当前字符和当前pattern对应位置不匹配，则 *当作0
+                //如果当前字符串已经到最后一位了，则 *也会被当作0
                 return matchCore(str, indexOfStr, pattern, indexOfPattern + 2);
             }
+
+//            //如果模式中的当前字符是一样的
+//            if((indexOfStr < str.length&&pattern[indexOfPattern]==str[indexOfStr])
+//                    ||(indexOfStr < str.length && pattern[indexOfPattern] == '.')){
+//                return
+//                        matchCore(str,indexOfStr+1,pattern,indexOfPattern+2)//ab和ab,所以这里会先把*代表1个来递归
+//                        ||matchCore(str,indexOfStr+1,pattern,indexOfPattern)//aaab和a*b。走到这边，说明*代表1不好使，要代表多个
+//                        ||matchCore(str,indexOfStr,pattern,indexOfPattern+2);//*被当成0来对待
+//            }else {
+//                return matchCore(str, indexOfStr, pattern, indexOfPattern + 2);
+//            }
         }
+        //走到这边，说明下一位不是*
         if (indexOfStr < str.length
                 && (
                 pattern[indexOfPattern] == str[indexOfStr]
@@ -142,5 +177,8 @@ public class RegularExpressionsMatching2 {
 //        demo.test5();
 //        demo.test6();
 //        demo.test7();
+
+        Pattern pattern =Pattern.compile("b.*c");
+        System.out.println(pattern.matcher("babc").matches());
     }
 }
