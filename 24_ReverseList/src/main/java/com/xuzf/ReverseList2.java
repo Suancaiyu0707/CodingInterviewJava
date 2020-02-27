@@ -49,9 +49,13 @@ public class ReverseList2 {
         ListNode curNode = head;
         ListNode preNode = null;
         while(curNode!=null){
+            //先获得下一个节点的指针
             ListNode next = curNode.next;
+            //将当前的节点的next指针指向前面的节点
             curNode.next=preNode;
+            //将当前节点设置为下一轮的前一个节点
             preNode=curNode;
+            //继续遍历下一个节点
             curNode=next;
         }
 
