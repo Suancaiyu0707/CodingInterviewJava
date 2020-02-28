@@ -1,5 +1,7 @@
 package com.xuzf;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -14,53 +16,48 @@ import java.util.Stack;
 public class MinInStack {
 
     public static void main( String[] args ) {
+        MinInStack minInStack = new MinInStack();
+        minInStack.push(4);
+        minInStack.push(10);
+        minInStack.push(5);
+        minInStack.push(6);
+        minInStack.push(3);
+        minInStack.push(1);
+        minInStack.push(1);
 
-        push(4);
-        push(10);
-        push(5);
-        push(6);
-        push(3);
-        push(1);
-        push(1);
-
-        while(!stack.isEmpty()){
-            System.out.println(pop());
+        while(!minInStack.stack.isEmpty()){
+            System.out.println(minInStack.pop());
         }
     }
     /***
      * 存放全量数据的stack
      */
-    private static Stack<Integer> stack = new Stack <>();
-    /***
-     * 用来存放每次的最小值
-     */
-    private static Stack<Integer> minStack = new Stack <>();
+    private Stack<Integer> stack = new Stack <>();
+    private List<Integer> list = new ArrayList<>();
 
+    public void push(Integer data){
 
-    public static  void push(Integer data){
-        if(data==null){
-            return ;
+        if(stack.isEmpty()){
+            list.add(data);
+        }else{
+
+            int smallest =list.get(list.size()-1);
+            if(smallest>=data){
+                list.add(data);
+            }
         }
         stack.push(data);
-        if(minStack.isEmpty()){
-            minStack.push(data);
-        }else{
-            Integer lastMin = minStack.peek();
-            if(lastMin>=data){//新加入的数据更小
-                minStack.push(data);
-            }
-        }
     }
-
-    public static Integer pop(){
-        Integer data = stack.pop();
-        if(!minStack.isEmpty()){
-            //查看当前的最小值
-            Integer lastMin = minStack.peek();
-            if(lastMin==data){//新加入的数据更小
-                minStack.pop();
+    public Integer pop(){
+        if(stack.isEmpty()){
+            return -1;
+        }else{
+            Integer data=stack.pop();
+            int smallest =list.get(list.size()-1);
+            if(smallest==data){
+                list.remove(list.size()-1);
             }
+            return data;
         }
-        return data;
     }
 }
