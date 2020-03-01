@@ -13,5 +13,18 @@ public class ListNode {
     //公有属性
     public ListNode next;
 
+    public ListNode( int data ) {
+        this.data = data;
+    }
+    public ListNode( ) {
+    }
 
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
+    }
 }

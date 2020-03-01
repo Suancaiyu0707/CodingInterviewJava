@@ -8,7 +8,7 @@ package com.xuzf;
  * Description: No Description
  * 反转链表
  */
-public class ReverseList {
+public class ReverseList2 {
     public static void main( String[] args ) {
         ListNode head = new ListNode();
         ListNode ln2 = new ListNode();
@@ -37,23 +37,28 @@ public class ReverseList {
         ln7.data = 7;
         ln8.data = 8;
         ln9.data = 9;
-        ReverseList reverse=new ReverseList();
-        ListNode node =reverse.reverse(head);
+
+        ListNode node =reverse(null);
         System.out.println(node);
     }
 
-    public  ListNode  reverse(ListNode head){
-      if(head==null) return null;
-        ListNode pre=null;
-
-        ListNode current=head;
-        while(current.next!=null){
-            ListNode next = current.next;
-            current.next=pre;
-            pre=current;
-            current=next;
+    public static ListNode  reverse(ListNode head){
+        if(head==null||head.next==null){
+            return head;
         }
-        current.next=pre;
-        return current;
+        ListNode curNode = head;
+        ListNode preNode = null;
+        while(curNode!=null){
+            //先获得下一个节点的指针
+            ListNode next = curNode.next;
+            //将当前的节点的next指针指向前面的节点
+            curNode.next=preNode;
+            //将当前节点设置为下一轮的前一个节点
+            preNode=curNode;
+            //继续遍历下一个节点
+            curNode=next;
+        }
+
+        return preNode;
     }
 }

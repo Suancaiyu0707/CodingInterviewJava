@@ -13,5 +13,11 @@ public class ListNode {
     //公有属性
     public ListNode next;
 
-
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
+    }
 }
