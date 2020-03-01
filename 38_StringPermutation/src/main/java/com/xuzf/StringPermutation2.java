@@ -2,7 +2,6 @@ package com.xuzf;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,61 +12,37 @@ import java.util.List;
  *
  * 输入一个字符串，打印出该字符串中字符的所有排列。例如输入字符串abc，则打印出由字符a、b、c所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
  */
-public class StringPermutation {
+public class StringPermutation2 {
 
     public static void main( String[] args ) {
 
-        String str = "abc";
-        StringPermutation permutation = new StringPermutation();
-        System.out.println(permutation.permutation(str));
+        String str = "abce";
+
+        System.out.println(Permutation(str));
     }
 
-    public  List <String> permutation( String str ) {
-        List<String> result = new ArrayList<>();
-
-        if(str==null||"".equals(str)){
-            return result;
-        }
-        char sources[] =str.toCharArray();
-
-        permutationCore(sources,0,result);
-        return result;
+    public static ArrayList <String> Permutation( String str ) {
+        ArrayList <String> list = new ArrayList <String>();
+        if (str == null || str.length() == 0)
+            return list;
+        permutationCore2(str.toCharArray(),  list,0);
+        Collections.sort(list);  //将list中的字符串排序
+        return list;
     }
 
-    /***
-     * 遍历组合字符串
-     * [a,b,c,d]
-     * 把index的节点跟后面的节点互换，计算出所有的组合
-     *      a和b互换：[b,a,c,d]
-     *      a和c互换：[c,b,,d]
-     *      a和d互换：[d,b,c,a]
-     * @param strArray
-     * @param index
-     * @param list
-     */
-    private  void permutationCore( char[] strArray, int index, List <String> list ) {
-
-        if(index==strArray.length-1){
-            list.add(new String(strArray));
-            return;
-        }
-        //把index的节点跟后面的节点互换，计算出所有的组合
-        /**
-         * 把index的节点跟后面的节点互换，计算出所有的组合
-         *      a和b互换：[b,a,c,d]
-         *      a和c互换：[c,b,a,d]
-         *      a和d互换：[d,b,c,a]
-         */
-        for(int i=index;i<strArray.length;i++){
-            //将index字符和i互相替换
-            char temp = strArray[index];
-            strArray[index]=strArray[i];
-            strArray[i]=temp;
-            permutationCore(strArray,index+1,list);
-            //这边当前[b,a,c,d]遍历完后，要还原回去为[a,b,c,d]，这样下一轮的时候，a机会跟c互换为：[c,b,a,d]
-            temp = strArray[index];
-            strArray[index]=strArray[i];
-            strArray[i]=temp;
+    private static void permutationCore( char[] strArray, int index, ArrayList <String> list ) {
+        if (index == strArray.length - 1) {
+            if (!list.contains(String.valueOf(strArray)))  //判断是否有重复字符串
+                list.add(String.valueOf(strArray));
+        } else {
+            for (int i = index; i < strArray.length; i++) {
+                char temp = strArray[index];
+                strArray[index] = strArray[i];
+                strArray[i] = temp;
+                permutationCore(strArray, index + 1, list);
+                strArray[i] = strArray[index];
+                strArray[index] = temp;
+            }
         }
     }
 
