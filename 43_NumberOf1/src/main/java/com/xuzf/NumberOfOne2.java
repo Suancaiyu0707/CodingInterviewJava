@@ -62,6 +62,7 @@ public class NumberOfOne2 {
                 }
                 num = num/10;
             }
+
         }
 
         return total;
