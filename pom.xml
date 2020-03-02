@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xuzf</groupId>
+    <artifactId>CodingInterviewJava</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>00_Others</module>
+        <module>01_Leetcode</module>
+        <module>02_Structs</module>
+        <module>03_DuplicationInArray</module>
+        <module>43_NumberOf1</module>
+        <module>44_DigitsInSequence</module>
+        <module>45_SortArrayForMinNumber</module>
+        <module>46_TranslateNumbersToStrings</module>
+        <module>47_MaxValueOfGifts</module>
+        <module>48_LongestSubstringWithoutDup</module>
+        <module>49_UglyNumber</module>
+        <module>50_FirstCharacterInStream</module>
+        <module>51_InversePairs</module>
+        <module>52_FirstCommonNodesInLists</module>
+        <module>53_NumberOfK</module>
+        <module>54_KthNodeInBST</module>
+        <module>55_TreeDepth</module>
+        <module>56_NumbersAppearOnce</module>
+        <module>57_NumbersWithSum</module>
+        <module>58_ReverseWordsInSentence</module>
+        <module>59_MaxInSlidingWindow</module>
+        <module>60_DicesProbability</module>
+    </modules>
+</project>
