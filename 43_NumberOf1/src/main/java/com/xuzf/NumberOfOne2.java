@@ -35,7 +35,6 @@ public class NumberOfOne2 {
             int low=(num%i);  //更低位数字
             int cur=(num/i)%10;  //当前位数字
             count+= high*i;
-
             if(cur==0){
 //                count+=high*i;
             }else if(cur==1){
