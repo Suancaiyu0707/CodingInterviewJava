@@ -47,7 +47,6 @@ public class NumberOfOne2 {
         }
         return count;
     }
-
     /***
      * 不断的循环遍历每个数，把这些数的1的个数相加求和
      * @param n
