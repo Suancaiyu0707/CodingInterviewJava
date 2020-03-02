@@ -65,7 +65,6 @@ public class NumberOfOne2 {
         }
         return total;
     }
-
     /***
      * 每个数都判断有几个1
      * @param i
