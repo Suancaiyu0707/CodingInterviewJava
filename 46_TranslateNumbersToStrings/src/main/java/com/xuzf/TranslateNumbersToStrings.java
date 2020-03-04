@@ -1,5 +1,7 @@
 package com.xuzf;
 
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
@@ -35,7 +37,7 @@ public class TranslateNumbersToStrings {
             int count = getTransCount(str,i);
             result[i]=count;
         }
-
+        System.out.println(Arrays.toString(result));
         return result[0];
     }
 
