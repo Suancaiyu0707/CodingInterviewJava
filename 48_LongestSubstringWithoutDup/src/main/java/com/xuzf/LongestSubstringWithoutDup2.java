@@ -13,7 +13,7 @@ import java.util.Map;
  *
  * 请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。假设字符串中只包含从'a'到'z'的字符。
  */
-public class LongestSubstringWithoutDup {
+public class LongestSubstringWithoutDup2 {
 
 
     public static void main( String[] args ) {
@@ -29,27 +29,33 @@ public class LongestSubstringWithoutDup {
         if(str==null||"".equals(str)){
             return 0;
         }
-        int longest =0;
-        int len = str.length();
-        Map<Character,Integer> map = new HashMap<Character,Integer>();
-        int beginIndex = 0;
-        for(int i=0;i<len;i++){
-            Character c=str.charAt(i);
+        int len =0;
 
-            if(map.containsKey(c)){//如果前面的已经包含了该索引
-                int oldIndex = map.get(c);
-
-                //判断索引是否在最长子串的开始位置的后面，是的话，新的子串要变了
-                if(oldIndex>=beginIndex){
-                   beginIndex=oldIndex+1;
-                }
+        char[] chars= str.toCharArray();
+        Map<Character,Integer> existChar =new HashMap <Character, Integer>();
+        int beginIndex =0;
+        int endIndex =0;
+        for(int i=0;i<chars.length;i++){
+            if(!existChar.containsKey(chars[i])){//如果前面未出现过该字符，
+                existChar.put(chars[i],i);
+                endIndex=i;
+                continue;
             }
-            map.put(c,i);
-            int newlen = i-beginIndex+1;
-            if(newlen>=longest){
-                longest=newlen;
+            //获得该字符上一次出现的位置
+            int lastIndex = existChar.get(chars[i]);
+            existChar.put(chars[i],i);
+            if(lastIndex<beginIndex){
+                endIndex=i;
+                continue ;
             }
+            //如果该字符上一次出现的是在beginIndex之后
+            int newlen = endIndex-beginIndex+1;
+            len=Math.max(len,newlen);
+            beginIndex=lastIndex+1;
+            endIndex=i;
         }
-        return longest;
+        int newlen = endIndex-beginIndex+1;
+        len=Math.max(len,newlen);
+        return len;
     }
 }

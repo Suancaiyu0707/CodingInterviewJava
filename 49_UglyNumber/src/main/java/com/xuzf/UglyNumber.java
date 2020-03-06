@@ -15,7 +15,12 @@ public class UglyNumber {
     public  static int [] array=new int[]{2,3,5};
     public static void main( String[] args ) {
 
-        System.out.println(findUglyNumber(1500));
+        System.out.println(findUglyNumber(1));
+        System.out.println(findUglyNumber(2));
+        System.out.println(findUglyNumber(3));
+        System.out.println(findUglyNumber(4));
+        System.out.println(findUglyNumber(5));
+        System.out.println(findUglyNumber(6));
 
     }
     /***

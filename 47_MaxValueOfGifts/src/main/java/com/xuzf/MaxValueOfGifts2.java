@@ -1,7 +1,5 @@
 package com.xuzf;
 
-import javax.swing.*;
-
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
@@ -14,7 +12,7 @@ import javax.swing.*;
  在一个m×n的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于0）。你可以从棋盘的左上角开始拿格子里的礼物，
  并每次向左或者向下移动一格直到到达棋盘的右下角。给定一个棋盘及其上面的礼物，请计算你最多能拿到多少价值的礼物？
  */
-public class MaxValueOfGifts {
+public class MaxValueOfGifts2 {
 
     public static int [][]result=null;
     public static int rows=0;
@@ -25,33 +23,41 @@ public class MaxValueOfGifts {
                 {12,2,9,6},
                 {5,7,16,8},
                 {1,10,3,5}
-        };
+        };//1 12 5 7 16 8 5
          rows=gifts.length;
          cols= gifts[0].length;
 
         result = new int[rows][cols];
+        MaxValueOfGifts2 maxValueOfGifts = new MaxValueOfGifts2();
+        maxValueOfGifts.getMaxGifts(gifts,rows,cols);
 
-        for(int i=rows-1;i>=0;i--){
-            for(int j=cols-1;j>=0;j--){
-                getMaxGifts(gifts,j,i);
-            }
-        }
         System.out.println(result[0][0]);
     }
 
-    public static void getMaxGifts(int[][]gifts,int col,int row){
-        if(row==rows-1&&col==cols-1){
-            result[row][col]=gifts[row][col];
-            return;
+    /***
+     *
+     * @param gifts
+     * @param col
+     * @param row
+     */
+    public void getMaxGifts(int[][]gifts,int row,int col){
+        //列
+        for(int i=row-1;i>=0;i--){
+            for(int j=col-1;j>=0;j--){
+                if(i==row-1&&j==col-1){
+                    result[i][j]=gifts[i][j];
+                    continue;
+                }
+                if(i==row-1){//如果是最后一行的话
+                    result[i][j]=result[i][j+1]+gifts[i][j];
+                    continue;
+                }
+                if(j==col-1){//如果是最后一列的话
+                    result[i][j]=result[i+1][j]+gifts[i][j];
+                    continue;
+                }
+                result[i][j]= Math.max(result[i+1][j],result[i][j+1])+gifts[i][j];
+            }
         }
-        if(row==rows-1){//如果是最后一行
-            result[row][col]=result[row][col+1]+gifts[row][col];
-            return;
-        }
-        if(col==cols-1){//如果是最后一列
-            result[row][col]=result[row+1][col]+gifts[row][col];
-            return;
-        }
-        result[row][col]=Math.max(result[row][col+1],result[row+1][col])+gifts[row][col];
     }
 }

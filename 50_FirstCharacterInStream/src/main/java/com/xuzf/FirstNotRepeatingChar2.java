@@ -13,12 +13,12 @@ import java.util.Map;
  *
  * 在字符串中找出第一个只出现一次的字符。如输入"abaccdeff"，则输出'b'
  */
-public class FirstNotRepeatingChar {
+public class FirstNotRepeatingChar2 {
 
     public static void main( String[] args ) {
         System.out.println(findFirstCharacterInStream("abcdbca"));
 
-        FirstNotRepeatingChar demo =new FirstNotRepeatingChar();
+        FirstNotRepeatingChar2 demo =new FirstNotRepeatingChar2();
         System.out.println((demo.firstNotRepeatingChar("google")=='l'));
         System.out.println((demo.firstNotRepeatingChar("aabccdbd")=='\0'));
         System.out.println((demo.firstNotRepeatingChar("$abcdefg")=='$'));

@@ -23,7 +23,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class BinaryTreeNode {
 
     public static LinkedBlockingQueue<BTree> queue = new LinkedBlockingQueue();
-    public static Set<BTree> set = new HashSet <>();
+    public static Set<BTree> set = new HashSet <BTree>();
     public static void main( String[] args ) {
         BTree tree = new BTree(56);
         tree.root =tree;
@@ -39,14 +39,14 @@ public class BinaryTreeNode {
         tree.insert(11);
         tree.insert(32);
         tree.insert(76);
-        List<Integer> result = new ArrayList <>();
+        List<Integer> result = new ArrayList <Integer>();
         middlerBinary(result,tree);
         System.out.println(result);
-        List<Integer> result2 = new ArrayList <>();
+        List<Integer> result2 = new ArrayList <Integer>();
         preBinary(result2,tree);
         System.out.println(result2);
 
-        List<Integer> result3 = new ArrayList <>();
+        List<Integer> result3 = new ArrayList <Integer>();
         postBinary(result3,tree);
         System.out.println(result3);
 
