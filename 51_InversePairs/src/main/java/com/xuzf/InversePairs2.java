@@ -39,7 +39,7 @@ public class InversePairs2 {
         outer:
         for(;i>=start;i--){
             inner:
-            for(;j>mid;){
+            for(;j>=mid+1;){
                 //如果array[i]比array[j]大，那么也就比array[j]之前的都大
                 if(array[i]>array[j]){
                     count +=j-mid;
