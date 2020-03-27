@@ -186,17 +186,18 @@ public class BTree {
         if (e == tree.data) {
             return false;
         }
-        if (e < tree.data) {
+        if (e < tree.data) {//当前值放在左子树里
             if (left == null) {
                 left = new BTree(e, null, null);
                 tree.left = left;
-                switch (tree.bf) {
+                switch (tree.bf) {//判断树原先的平衡因子
                     case 1:
+                        //如果树原先的平衡因子是1，再添加一个元素，则这时候需要旋转了
                         //左平衡旋转 等高
                         leftBalance(tree);
                         break;
                     case 0:
-                        //左子树比右子树高
+                        //树的平衡因子从0->1，左子树比右子树高，满足平衡因子<=1，所以不旋转
                         tree.bf = 1;
                         break;
                     case -1:
@@ -204,21 +205,21 @@ public class BTree {
                         tree.bf = 0;
                         break;
                 }
-            } else {
+            } else {//如果左子树不为空，则继续递归下去
                 insertAVL(tree.left, e);
             }
-        } else {
+        } else {//当前值放在右子树里
             if (right == null) {
                 right = new BTree(e, null, null);
                 tree.right = right;
                 switch (tree.bf) {
-                    case 1:
+                    case 1://左右子树等高
                         tree.bf = 0;
                         break;
-                    case 0:
+                    case 0://树的平衡因子从0->-1，左子树比右子树高，满足平衡因子>=-1，所以不旋转
                         tree.bf = -1;
                         break;
-                    case -1:
+                    case -1://如果树原先的平衡因子是-1，再添加一个元素，则这时候需要旋转了
                         rightBalance(tree);
                         break;
                 }
@@ -228,5 +229,25 @@ public class BTree {
             }
         }
         return true;
+    }
+
+
+    public static void main( String[] args ) {
+        BTree bTree=new BTree();
+        bTree.root=new BTree();
+        bTree.root.data=9;
+
+        bTree.insertAVL(bTree.root,3);
+        bTree.insertAVL(bTree.root,10);
+        bTree.insertAVL(bTree.root,2);
+        bTree.insertAVL(bTree.root,11);
+        bTree.insertAVL(bTree.root,1);
+
+        bTree.insertAVL(bTree.root,7);
+        bTree.insertAVL(bTree.root,6);
+        bTree.insertAVL(bTree.root,8);
+        bTree.insertAVL(bTree.root,5);
+
+
     }
 }
