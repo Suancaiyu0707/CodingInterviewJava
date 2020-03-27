@@ -28,33 +28,36 @@ public class BinaryTreeNode {
         BTree tree = new BTree(56);
         tree.root =tree;
 
-//        tree.insert(23);
-//        tree.insert(98);
-//        tree.insert(33);
-//        tree.insert(54);
-//        tree.insert(44);
-//        tree.insert(66);
-//        tree.insert(53);
-//        tree.insert(75);
-//        tree.insert(11);
-//        tree.insert(32);
-//        tree.insert(76);
+        tree.insert(23);
+        tree.insert(98);
+        tree.insert(33);
+        tree.insert(54);
+        tree.insert(44);
+        tree.insert(66);
+        tree.insert(53);
+        tree.insert(75);
+        tree.insert(11);
+        tree.insert(32);
+        tree.insert(76);
 
-        int[] a = {23, 98, 33, 54, 44, 66, 53, 75, 11, 32, 76};
-        BTree bTree = new BTree(56);
-        boolean taller = true;
+        int[] a = {3,2,1,4,5,6,7,10,9,8};
+        BTree bTree = new BTree(a[0]);
         for (int i = 0; i < a.length; i++) {
-            bTree.insertAVL(bTree, a[i], taller);
+            bTree.insertAVL(bTree,a[i]);
         }
         List<Integer> result = new ArrayList <Integer>();
-        middlerBinary(result,tree);
+//        middlerBinary(result,tree);
+        middlerBinary(result,bTree);
         System.out.println(result);
         List<Integer> result2 = new ArrayList <Integer>();
-        preBinary(result2,tree);
+//        preBinary(result2,tree);
+        preBinary(result2,bTree);
         System.out.println(result2);
 
         List<Integer> result3 = new ArrayList <Integer>();
-        postBinary(result3,tree);
+//        postBinary(result3,tree);
+        postBinary(result3,bTree);
+
         System.out.println(result3);
 
         BTree common = findMorN(tree,11,53);
