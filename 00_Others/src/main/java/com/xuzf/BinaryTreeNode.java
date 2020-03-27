@@ -28,17 +28,24 @@ public class BinaryTreeNode {
         BTree tree = new BTree(56);
         tree.root =tree;
 
-        tree.insert(23);
-        tree.insert(98);
-        tree.insert(33);
-        tree.insert(54);
-        tree.insert(44);
-        tree.insert(66);
-        tree.insert(53);
-        tree.insert(75);
-        tree.insert(11);
-        tree.insert(32);
-        tree.insert(76);
+//        tree.insert(23);
+//        tree.insert(98);
+//        tree.insert(33);
+//        tree.insert(54);
+//        tree.insert(44);
+//        tree.insert(66);
+//        tree.insert(53);
+//        tree.insert(75);
+//        tree.insert(11);
+//        tree.insert(32);
+//        tree.insert(76);
+
+        int[] a = {23, 98, 33, 54, 44, 66, 53, 75, 11, 32, 76};
+        BTree bTree = new BTree(56);
+        boolean taller = true;
+        for (int i = 0; i < a.length; i++) {
+            bTree.insertAVL(bTree, a[i], taller);
+        }
         List<Integer> result = new ArrayList <Integer>();
         middlerBinary(result,tree);
         System.out.println(result);

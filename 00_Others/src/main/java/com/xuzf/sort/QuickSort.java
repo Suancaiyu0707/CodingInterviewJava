@@ -122,5 +122,36 @@ public class QuickSort {
         System.out.println(Arrays.toString(array2));
         System.out.println();
         System.out.println(Arrays.toString(array3));
+
+        int[] arr = { 50,10,90,30,70,40,80,60,20};
+        quickSort3(arr, 0, arr.length-1);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void quickSort3(int[] arr, int low, int high){
+
+        if (low>=high){
+            return;
+        }
+        int pivot = partition3(arr, low, high);
+        quickSort3(arr, low, pivot);
+        quickSort3(arr, pivot+1, high);
+    }
+
+    static int partition3(int[] arr, int low, int high){
+        int base = arr[low];
+
+        while (low < high){
+            while (low<high && arr[high]>=base){
+                high--;
+            }
+            arr[low] = arr[high];
+            while (low<high && arr[low]<=base){
+                low++;
+            }
+            arr[high] = arr[low];
+        }
+        arr[low] = base;
+        return low;
     }
 }

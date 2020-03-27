@@ -1,5 +1,7 @@
 package com.xuzf.sort;
 
+import java.time.YearMonth;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
@@ -33,6 +35,36 @@ public class SelectSort {
     public static void main(String args[]){
         int[] num={5,2,4,6,8,9,7,1,3,0};
         sort(num);
+
+    }
+    //{0,2,4,6,8,9,7,1,3,5}   i=1
+    //{0,1,4,6,8,9,7,2,3,5}   i=2
+    //{0,1,2,6,8,9,7,4,3,5}   i=3
+    //{0,1,2,3,8,9,7,4,6,5}   i=4
+    //{0,1,2,3,4,9,7,8,6,5}   i=5
+    //{0,1,2,3,4,5,7,8,6,9}   i=6
+    //{0,1,2,3,4,5,6,8,7,9}   i=7
+    //{0,1,2,3,4,5,6,7,8,9}   i=8
+
+
+
+    public static void selectSort(int[] arr){
+        int i,j,min,temp;
+        for (i=0; i<arr.length; i++){
+            min = i;
+            for (j=i+1; j<arr.length; j++){
+                if (arr[min]>arr[j]){
+                    min = j;
+                }
+            }
+            if (i != min){
+                temp = arr[i];
+                arr[i] = arr[min];
+                arr[min] = temp;
+            }
+
+        }
+
 
     }
 }

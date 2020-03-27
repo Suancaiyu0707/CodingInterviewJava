@@ -117,4 +117,22 @@ public class BubbleSort {
         System.out.println(Arrays.toString(num2));
     }
 
+
+    public static void bubbleSort(int[] arr){
+        int i,j,temp;
+        //加flag标记为了保证没有交换数据的时候退出循环比较
+        boolean flag = true;
+        for (i=0; i<arr.length&&flag; i++){
+            flag = false;
+            for (j=arr.length-1; j>i; j--){
+                if (arr[j-1]> arr[j]){
+                    temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                    flag = true;
+                }
+            }
+        }
+    }
+
 }

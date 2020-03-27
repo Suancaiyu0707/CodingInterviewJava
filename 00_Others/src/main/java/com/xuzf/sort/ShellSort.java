@@ -38,6 +38,32 @@ public class ShellSort {
         // TODO Auto-generated method stub
         int[] a = { 5, 2, 4, 6, 8, 9, 7, 1, 3, 0 };
         // int[]a={49,38,65,97,76,13,27,49,78,34,12,64,1};
-        sort(a);
+//        sort(a);
+        shellSort(a);
+        for(int n : a){
+            System.out.print(n+" ");
+        }
+
+    }
+
+
+    public static void shellSort(int[] arr){
+        int i,j, temp;
+        int increment = arr.length;
+
+        while (true){
+            increment = increment/2;
+            for (i=increment; i<arr.length; i++){
+                temp = arr[i];
+                for (j=i-increment; j>=0&&arr[j]>temp; j-=increment){
+                    arr[j+increment] = arr[j];
+                }
+                arr[j+increment] = temp;
+            }
+            if (increment == 1) {
+                break;
+            }
+        }
+
     }
 }
