@@ -25,14 +25,14 @@ public class GraphBFSWithWeight {
     /***
      * 装载每个节点的开销
      */
-    public static  Map<String,TreeMap<String,Integer>> data =new HashMap<>();
+    public static  Map<String,TreeMap<String,Integer>> data =new HashMap<String,TreeMap<String,Integer>>();
 
-    public static  Map<String,String> parents =new HashMap<>();
-    public static  Queue<String> queue = new LinkedBlockingDeque<>();
-    public static Set<String> hashAdd = new HashSet <>();
+    public static  Map<String,String> parents =new HashMap<String,String>();
+    public static  Queue<String> queue = new LinkedBlockingDeque<String>();
+    public static Set<String> hashAdd = new HashSet <String>();
 
 
-    public static Map<String,Integer> resultMap = new HashMap <>();
+    public static Map<String,Integer> resultMap = new HashMap <String,Integer>();
 
     public static void search(String key){
        queue.add(key);
@@ -72,12 +72,12 @@ public class GraphBFSWithWeight {
         data.put("起点",childMap);
 
 
-        TreeMap<String,Integer>childMap2 = new TreeMap <>();
+        TreeMap<String,Integer>childMap2 = new TreeMap <String,Integer>();
         childMap2.put("A",3);
         childMap2.put("终点",5);
         data.put("B",childMap2);
 
-        TreeMap<String,Integer>childMap3 = new TreeMap();
+        TreeMap<String,Integer>childMap3 = new TreeMap<String,Integer>();
         childMap3.put("终点",1);
         data.put("A",childMap3);
 

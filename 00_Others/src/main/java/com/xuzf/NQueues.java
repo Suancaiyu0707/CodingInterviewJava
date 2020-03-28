@@ -20,11 +20,11 @@ public class NQueues {
 
     public static String[] find(){
         //记录已被占用的列
-        Set<Integer> haveCols = new HashSet <>();
+        Set<Integer> haveCols = new HashSet <Integer>();
         //
-        Set<Integer> colSubRow=new HashSet <>();
+        Set<Integer> colSubRow=new HashSet <Integer>();
 
-        Set<Integer> rowAddCol=new HashSet <>();
+        Set<Integer> rowAddCol=new HashSet <Integer>();
         List<String> result= new ArrayList();
         DFS(0,haveCols,rowAddCol,colSubRow,result);
         return null;

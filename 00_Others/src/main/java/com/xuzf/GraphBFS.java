@@ -18,9 +18,9 @@ public class GraphBFS {
         initGraph();
         System.out.println(search("you"));
     }
-    public static  Map<String,String[]> data =new HashMap<>();
-    public static  Queue<String> queue = new LinkedBlockingDeque<>();
-    public static Set<String> hashAdd = new HashSet <>();
+    public static  Map<String,String[]> data =new HashMap<String,String[]>();
+    public static  Queue<String> queue = new LinkedBlockingDeque<String>();
+    public static Set<String> hashAdd = new HashSet <String>();
     public static String search(String key){
         if(!data.containsKey(key)){
             return null;

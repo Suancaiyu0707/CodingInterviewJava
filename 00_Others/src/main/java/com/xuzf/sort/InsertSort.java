@@ -1,6 +1,5 @@
 package com.xuzf.sort;
 
-import sun.jvm.hotspot.memory.TenuredGeneration;
 
 /**
  * Created with IntelliJ IDEA.

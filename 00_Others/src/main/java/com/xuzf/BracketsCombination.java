@@ -11,7 +11,7 @@ import java.util.List;
  * Description: No Description
  */
 public class BracketsCombination {
-    public static List<String> list = new ArrayList<>();
+    public static List<String> list = new ArrayList<String>();
 
     public static void main( String[] args ) {
         String result="";
