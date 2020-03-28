@@ -9,7 +9,7 @@ package com.xuzf;
  */
 public class TreeNode {
     public int data;
-    public int bf;
+    public int height;
     public TreeNode left;
     public TreeNode right;
 
@@ -20,6 +20,6 @@ public class TreeNode {
         this.data=element;
         this.left=left;
         this.right=right;
-        bf=0;
+        this.height=0;
     }
 }

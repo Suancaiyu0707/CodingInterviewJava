@@ -78,7 +78,7 @@ public class BTree {
     //     L  bf=1
     // N bf=0
     //以p为根结点做右旋操作
-    void rRotate(BTree p) {
+    BTree rRotate(BTree p) {
         BTree l = p.left;
         //将L的右子树变成p的左子树
         p.left = l.right;
@@ -86,6 +86,7 @@ public class BTree {
         l.right = p;
         //将根结点替换为L
         p = l;
+        return p;
     }
 
     /***
@@ -95,11 +96,12 @@ public class BTree {
      * 以P为根结点做左旋操作
      * @param p
      */
-    void lRotate(BTree p) {
+    BTree lRotate(BTree p) {
         BTree r = p.right;
         p.right = r.left;
         r.left = p;
         p = r;
+        return p;
     }
 
     /**
@@ -107,14 +109,14 @@ public class BTree {
      *
      * @param tree
      */
-    void leftBalance(BTree tree) {
+    BTree leftBalance(BTree tree) {
         BTree l = tree.left;
         //检查tree的左子树的平衡度，并作相应的平衡处理
         switch (l.bf) {
             case 1:
                 //新结点放在tree的左孩子的左子树上，做右旋处理
                 tree.bf = l.bf = 0;
-                rRotate(tree);
+                tree=rRotate(tree);
                 break;
             case -1:
                 //新结点放在tree的左孩子的右子树上，做双旋处理
@@ -135,19 +137,20 @@ public class BTree {
                 }
                 lr.bf = 0;
                 //对tree的左子树左旋
-                lRotate(l);
+                tree.left=lRotate(l);
                 //对tree右旋
-                rRotate(tree);
+                tree=rRotate(tree);
         }
+        return tree;
     }
 
-    void rightBalance(BTree tree) {
+    BTree rightBalance(BTree tree) {
         BTree r = tree.right;
         switch (r.bf) {
             case -1:
                 //新结点放在tree的右孩子的右子树上，左旋
                 tree.bf = r.bf = 0;
-                lRotate(tree);
+                tree = lRotate(tree);
                 break;
             case 1:
                 //新结点放在tree的右孩子的左子树上，双旋
@@ -166,88 +169,109 @@ public class BTree {
                         break;
                 }
                 //先对tree的右子树右旋
-                rRotate(r);
+                tree.right=rRotate(r);
                 //再对根结点左旋
-                lRotate(tree);
+                tree=lRotate(tree);
 
         }
+        return tree;
     }
 
     /***
      *
+     * @param
      * @param tree
      * @param e
-     * @param
      * @return
      */
-    boolean insertAVL(BTree tree, int e) {
-        BTree left = tree.left;
-        BTree right = tree.right;
-        if (e == tree.data) {
-            return false;
-        }
-        if (e < tree.data) {//当前值放在左子树里
-            if (left == null) {
-                left = new BTree(e, null, null);
-                tree.left = left;
-                switch (tree.bf) {//判断树原先的平衡因子
-                    case 1:
-                        //如果树原先的平衡因子是1，再添加一个元素，则这时候需要旋转了
-                        //左平衡旋转 等高
-                        leftBalance(tree);
-                        break;
-                    case 0:
-                        //树的平衡因子从0->1，左子树比右子树高，满足平衡因子<=1，所以不旋转
-                        tree.bf = 1;
-                        break;
-                    case -1:
-                        //左右子树等高
-                        tree.bf = 0;
-                        break;
+    BTree insertAVL(BTree tree, int e, Status status) {
+//        BTree left = tree.left;
+//        BTree right = tree.right;
+        if(tree==null){
+            tree=new BTree(e);
+            tree.bf=0;
+            status.flag=true;
+        }else{
+            if(e==tree.data){
+                status.flag=false;
+                return null;
+            }
+            if(e<tree.data){//应该继续在tree的左子树中继续进行搜索
+                BTree left =insertAVL(tree.left,e,status);
+                if(left==null){
+                    return null;
                 }
-            } else {//如果左子树不为空，则继续递归下去
-                insertAVL(tree.left, e);
-            }
-        } else {//当前值放在右子树里
-            if (right == null) {
-                right = new BTree(e, null, null);
-                tree.right = right;
-                switch (tree.bf) {
-                    case 1://左右子树等高
-                        tree.bf = 0;
-                        break;
-                    case 0://树的平衡因子从0->-1，左子树比右子树高，满足平衡因子>=-1，所以不旋转
-                        tree.bf = -1;
-                        break;
-                    case -1://如果树原先的平衡因子是-1，再添加一个元素，则这时候需要旋转了
-                        rightBalance(tree);
-                        break;
+                tree.left=left;
+                if(status.flag){
+                    switch (tree.bf) {//判断树原先的平衡因子
+                        case 1:
+                            //如果树原先的平衡因子是1，再添加一个元素，则这时候需要旋转了
+                            //左平衡旋转 等高
+                            tree=leftBalance(tree);
+                            status.flag=false;
+                            break;
+                        case 0:
+                            //树的平衡因子从0->1，左子树比右子树高，满足平衡因子<=1，所以不旋转
+                            tree.bf = 1;
+                            status.flag=true;
+                            break;
+                        case -1:
+                            //左右子树等高
+                            tree.bf = 0;
+                            status.flag=false;
+                            break;
+                    }
+                }
+            }else{
+                BTree right =insertAVL(tree.right,e,status);
+                if(right==null){
+                    return null;
+                }
+                tree.right=right;
+                if(status.flag){
+                    switch (tree.bf) {
+                        case 1://左右子树等高
+                            tree.bf = 0;
+                            status.flag=false;
+                            break;
+                        case 0://树的平衡因子从0->-1，左子树比右子树高，满足平衡因子>=-1，所以不旋转
+                            tree.bf = -1;
+                            status.flag=true;
+                            break;
+                        case -1://如果树原先的平衡因子是-1，再添加一个元素，则这时候需要旋转了
+                            tree=rightBalance(tree);
+                            status.flag=false;
+                            break;
+                    }
                 }
             }
-            else {
-                insertAVL(tree.right, e);
-            }
+
         }
-        return true;
+        return tree;
+    }
+
+    private int height(BTree tree) {
+        if (tree != null)
+            return tree.bf;
+
+        return 0;
+    }
+
+    public int height() {
+        return height(root);
     }
 
 
     public static void main( String[] args ) {
-        BTree bTree=new BTree();
-        bTree.root=new BTree();
-        bTree.root.data=9;
+        int a[]={3,2,1,4,5,6,7,10,9,8};
+        BTree bTree = new BTree();
+        BTree T=null;
 
-        bTree.insertAVL(bTree.root,3);
-        bTree.insertAVL(bTree.root,10);
-        bTree.insertAVL(bTree.root,2);
-        bTree.insertAVL(bTree.root,11);
-        bTree.insertAVL(bTree.root,1);
+        Status taller=new Status();
+        for(int i=0;i<a.length;i++){
+            T=bTree.insertAVL(T,a[i],taller);
+        }
 
-        bTree.insertAVL(bTree.root,7);
-        bTree.insertAVL(bTree.root,6);
-        bTree.insertAVL(bTree.root,8);
-        bTree.insertAVL(bTree.root,5);
-
-
+        System.out.println("T="+T);
     }
 }

@@ -42,8 +42,9 @@ public class BinaryTreeNode {
 
         int[] a = {3,2,1,4,5,6,7,10,9,8};
         BTree bTree = new BTree(a[0]);
+        Status status = new Status();
         for (int i = 0; i < a.length; i++) {
-            bTree.insertAVL(bTree,a[i]);
+            bTree.insertAVL(bTree,a[i],status);
         }
         List<Integer> result = new ArrayList <Integer>();
 //        middlerBinary(result,tree);

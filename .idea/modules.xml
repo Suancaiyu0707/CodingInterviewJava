@@ -2,6 +2,28 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/00_Others/00_Others.iml" filepath="$PROJECT_DIR$/00_Others/00_Others.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_Leetcode/01_Leetcode.iml" filepath="$PROJECT_DIR$/01_Leetcode/01_Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Structs/02_Structs.iml" filepath="$PROJECT_DIR$/02_Structs/02_Structs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_DuplicationInArray/03_DuplicationInArray.iml" filepath="$PROJECT_DIR$/03_DuplicationInArray/03_DuplicationInArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" filepath="$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" filepath="$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" filepath="$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/46_TranslateNumbersToStrings/46_TranslateNumbersToStrings.iml" filepath="$PROJECT_DIR$/46_TranslateNumbersToStrings/46_TranslateNumbersToStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/47_MaxValueOfGifts/47_MaxValueOfGifts.iml" filepath="$PROJECT_DIR$/47_MaxValueOfGifts/47_MaxValueOfGifts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/48_LongestSubstringWithoutDup/48_LongestSubstringWithoutDup.iml" filepath="$PROJECT_DIR$/48_LongestSubstringWithoutDup/48_LongestSubstringWithoutDup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/49_UglyNumber/49_UglyNumber.iml" filepath="$PROJECT_DIR$/49_UglyNumber/49_UglyNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/50_FirstCharacterInStream/50_FirstCharacterInStream.iml" filepath="$PROJECT_DIR$/50_FirstCharacterInStream/50_FirstCharacterInStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/51_InversePairs/51_InversePairs.iml" filepath="$PROJECT_DIR$/51_InversePairs/51_InversePairs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/52_FirstCommonNodesInLists/52_FirstCommonNodesInLists.iml" filepath="$PROJECT_DIR$/52_FirstCommonNodesInLists/52_FirstCommonNodesInLists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/53_NumberOfK/53_NumberOfK.iml" filepath="$PROJECT_DIR$/53_NumberOfK/53_NumberOfK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/54_KthNodeInBST/54_KthNodeInBST.iml" filepath="$PROJECT_DIR$/54_KthNodeInBST/54_KthNodeInBST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/55_TreeDepth/55_TreeDepth.iml" filepath="$PROJECT_DIR$/55_TreeDepth/55_TreeDepth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/56_NumbersAppearOnce/56_NumbersAppearOnce.iml" filepath="$PROJECT_DIR$/56_NumbersAppearOnce/56_NumbersAppearOnce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/57_NumbersWithSum/57_NumbersWithSum.iml" filepath="$PROJECT_DIR$/57_NumbersWithSum/57_NumbersWithSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/58_ReverseWordsInSentence/58_ReverseWordsInSentence.iml" filepath="$PROJECT_DIR$/58_ReverseWordsInSentence/58_ReverseWordsInSentence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/59_MaxInSlidingWindow/59_MaxInSlidingWindow.iml" filepath="$PROJECT_DIR$/59_MaxInSlidingWindow/59_MaxInSlidingWindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/60_DicesProbability/60_DicesProbability.iml" filepath="$PROJECT_DIR$/60_DicesProbability/60_DicesProbability.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CodingInterviewJava.iml" filepath="$PROJECT_DIR$/.idea/CodingInterviewJava.iml" />
     </modules>
   </component>
