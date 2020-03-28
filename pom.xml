@@ -18,6 +18,7 @@
         <module>06_PrintListInReversedOrder</module>
         <module>07_ConstructBinaryTree</module>
         <module>08_NextNodeInBinaryTrees</module>
+        <module>09_QueueWithTwoStacks</module>
         <module>10_Fibonacci</module>
         <module>11_MinNumberInRotatedArray</module>
         <module>12_StringPathInMatrix</module>
