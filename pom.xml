@@ -13,6 +13,12 @@
         <module>01_Leetcode</module>
         <module>02_Structs</module>
         <module>03_DuplicationInArray</module>
+        <module>04_FindInPartiallySortedMatrix</module>
+        <module>05_ReplaceSpaces</module>
+        <module>06_PrintListInReversedOrder</module>
+        <module>07_ConstructBinaryTree</module>
+        <module>08_NextNodeInBinaryTrees</module>
+        <module>09_QueueWithTwoStacks</module>
         <module>43_NumberOf1</module>
         <module>44_DigitsInSequence</module>
         <module>45_SortArrayForMinNumber</module>

@@ -6,6 +6,12 @@
       <module fileurl="file://$PROJECT_DIR$/01_Leetcode/01_Leetcode.iml" filepath="$PROJECT_DIR$/01_Leetcode/01_Leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_Structs/02_Structs.iml" filepath="$PROJECT_DIR$/02_Structs/02_Structs.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_DuplicationInArray/03_DuplicationInArray.iml" filepath="$PROJECT_DIR$/03_DuplicationInArray/03_DuplicationInArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_FindInPartiallySortedMatrix/04_FindInPartiallySortedMatrix.iml" filepath="$PROJECT_DIR$/04_FindInPartiallySortedMatrix/04_FindInPartiallySortedMatrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_ReplaceSpaces/05_ReplaceSpaces.iml" filepath="$PROJECT_DIR$/05_ReplaceSpaces/05_ReplaceSpaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_PrintListInReversedOrder/06_PrintListInReversedOrder.iml" filepath="$PROJECT_DIR$/06_PrintListInReversedOrder/06_PrintListInReversedOrder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_ConstructBinaryTree/07_ConstructBinaryTree.iml" filepath="$PROJECT_DIR$/07_ConstructBinaryTree/07_ConstructBinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_NextNodeInBinaryTrees/08_NextNodeInBinaryTrees.iml" filepath="$PROJECT_DIR$/08_NextNodeInBinaryTrees/08_NextNodeInBinaryTrees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_QueueWithTwoStacks/09_QueueWithTwoStacks.iml" filepath="$PROJECT_DIR$/09_QueueWithTwoStacks/09_QueueWithTwoStacks.iml" />
       <module fileurl="file://$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" filepath="$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" />
       <module fileurl="file://$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" filepath="$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" filepath="$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" />

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -9,11 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="49_UglyNumber" />
         <module name="47_MaxValueOfGifts" />
-        <module name="59_MaxInSlidingWindow" />
+        <module name="05_ReplaceSpaces" />
         <module name="48_LongestSubstringWithoutDup" />
+        <module name="06_PrintListInReversedOrder" />
         <module name="46_TranslateNumbersToStrings" />
+        <module name="09_QueueWithTwoStacks" />
         <module name="51_InversePairs" />
+        <module name="08_NextNodeInBinaryTrees" />
+        <module name="04_FindInPartiallySortedMatrix" />
         <module name="54_KthNodeInBST" />
+        <module name="07_ConstructBinaryTree" />
         <module name="50_FirstCharacterInStream" />
         <module name="52_FirstCommonNodesInLists" />
         <module name="45_SortArrayForMinNumber" />
@@ -23,8 +27,9 @@
         <module name="01_Leetcode" />
         <module name="02_Structs" />
         <module name="56_NumbersAppearOnce" />
-        <module name="00_Others" />
+        <module name="59_MaxInSlidingWindow" />
         <module name="53_NumberOfK" />
+        <module name="00_Others" />
         <module name="03_DuplicationInArray" />
         <module name="44_DigitsInSequence" />
         <module name="CodingInterviewJava" />
@@ -33,29 +38,35 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="00_Others" target="8" />
-      <module name="01_Leetcode" target="8" />
-      <module name="02_Structs" target="8" />
-      <module name="03_DuplicationInArray" target="8" />
-      <module name="43_NumberOf1" target="8" />
-      <module name="44_DigitsInSequence" target="8" />
-      <module name="45_SortArrayForMinNumber" target="8" />
-      <module name="46_TranslateNumbersToStrings" target="8" />
-      <module name="47_MaxValueOfGifts" target="8" />
-      <module name="48_LongestSubstringWithoutDup" target="8" />
-      <module name="49_UglyNumber" target="8" />
-      <module name="50_FirstCharacterInStream" target="8" />
-      <module name="51_InversePairs" target="1.5" />
-      <module name="52_FirstCommonNodesInLists" target="8" />
-      <module name="53_NumberOfK" target="8" />
-      <module name="54_KthNodeInBST" target="8" />
-      <module name="55_TreeDepth" target="1.5" />
-      <module name="56_NumbersAppearOnce" target="8" />
-      <module name="57_NumbersWithSum" target="8" />
-      <module name="58_ReverseWordsInSentence" target="8" />
-      <module name="59_MaxInSlidingWindow" target="8" />
-      <module name="60_DicesProbability" target="8" />
-      <module name="CodingInterviewJava" target="8" />
+      <module name="00_Others" target="6" />
+      <module name="01_Leetcode" target="1.8" />
+      <module name="02_Structs" target="1.8" />
+      <module name="03_DuplicationInArray" target="1.8" />
+      <module name="04_FindInPartiallySortedMatrix" target="1.8" />
+      <module name="05_ReplaceSpaces" target="1.8" />
+      <module name="06_PrintListInReversedOrder" target="1.8" />
+      <module name="07_ConstructBinaryTree" target="1.8" />
+      <module name="08_NextNodeInBinaryTrees" target="1.8" />
+      <module name="09_QueueWithTwoStacks" target="1.8" />
+      <module name="43_NumberOf1" target="1.8" />
+      <module name="44_DigitsInSequence" target="1.8" />
+      <module name="45_SortArrayForMinNumber" target="6" />
+      <module name="46_TranslateNumbersToStrings" target="1.8" />
+      <module name="47_MaxValueOfGifts" target="1.8" />
+      <module name="48_LongestSubstringWithoutDup" target="1.8" />
+      <module name="49_UglyNumber" target="1.8" />
+      <module name="50_FirstCharacterInStream" target="1.8" />
+      <module name="51_InversePairs" target="1.8" />
+      <module name="52_FirstCommonNodesInLists" target="1.8" />
+      <module name="53_NumberOfK" target="1.8" />
+      <module name="54_KthNodeInBST" target="1.8" />
+      <module name="55_TreeDepth" target="1.8" />
+      <module name="56_NumbersAppearOnce" target="1.8" />
+      <module name="57_NumbersWithSum" target="1.8" />
+      <module name="58_ReverseWordsInSentence" target="1.8" />
+      <module name="59_MaxInSlidingWindow" target="1.8" />
+      <module name="60_DicesProbability" target="1.8" />
+      <module name="CodingInterviewJava" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
