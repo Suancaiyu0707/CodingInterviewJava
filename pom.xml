@@ -18,7 +18,19 @@
         <module>06_PrintListInReversedOrder</module>
         <module>07_ConstructBinaryTree</module>
         <module>08_NextNodeInBinaryTrees</module>
-        <module>09_QueueWithTwoStacks</module>
+        <module>10_Fibonacci</module>
+        <module>11_MinNumberInRotatedArray</module>
+        <module>12_StringPathInMatrix</module>
+        <module>13_RobotMove</module>
+        <module>14_CuttingRope</module>
+        <module>15_NumberOf1InBinary</module>
+        <module>16_Power</module>
+        <module>17_Print1ToMaxOfNDigits</module>
+        <module>18_DeleteNodeInList</module>
+        <module>19_RegularExpressionsMatching</module>
+        <module>20_NumericStrings</module>
+        <module>21_ReorderArray</module>
+        <module>22_KthNodeFromEnd</module>
         <module>43_NumberOf1</module>
         <module>44_DigitsInSequence</module>
         <module>45_SortArrayForMinNumber</module>
