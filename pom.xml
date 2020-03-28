@@ -32,6 +32,26 @@
         <module>20_NumericStrings</module>
         <module>21_ReorderArray</module>
         <module>22_KthNodeFromEnd</module>
+        <module>23_EntryNodeInListLoop</module>
+        <module>24_ReverseList</module>
+        <module>25_MergeSortedLists</module>
+        <module>26_SubstructureInTree</module>
+        <module>27_MirrorOfBinaryTree</module>
+        <module>28_SymmetricalBinaryTree</module>
+        <module>29_PrintMatrix</module>
+        <module>30_MinInStack</module>
+        <module>31_StackPushPopOrder</module>
+        <module>32_PrintTreeFromTopToBottom</module>
+        <module>33_SquenceOfBST</module>
+        <module>34_PathInTree</module>
+        <module>35_CopyComplexList</module>
+        <module>36_ConvertBinarySearchTree</module>
+        <module>37_SerializeBinaryTrees</module>
+        <module>38_StringPermutation</module>
+        <module>39_MoreThanHalfNumber</module>
+        <module>40_KLeastNumbers</module>
+        <module>41_StreamMedian</module>
+        <module>42_GreatestSumOfSubarrays</module>
         <module>43_NumberOf1</module>
         <module>44_DigitsInSequence</module>
         <module>45_SortArrayForMinNumber</module>
