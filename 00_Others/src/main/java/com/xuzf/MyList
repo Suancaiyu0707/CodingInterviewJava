@@ -1,0 +1,59 @@
+package com.online.J2SE.algorithm;
+
+public class MyList {
+    private Node head;
+
+    private Node tail;
+
+    private int size;
+
+    public void insert(int index,int data){
+        if(index<0||index >size){
+           throw new IndexOutOfBoundsException();
+        }
+        Node node = new Node(data);
+        if(size==0){
+            head=node;
+            tail=node;
+        }else if(index==0){//头节点
+            node.next=head;
+            head.pre=node;
+            head=node;
+        }else if(index==size){//尾节点
+            tail.next=node;
+            node.pre=tail;
+        }else{
+            Node preNode = get(index-1);
+
+            Node nextNode = preNode.next;
+
+            preNode.next=node;
+            node.pre=preNode;
+            node.next=nextNode;
+            nextNode.pre=node;
+        }
+    }
+    //获得指定索引的节点
+    public Node get(int index){
+        if(index<0||index >=size){
+            throw new IndexOutOfBoundsException();
+        }
+        Node node = head;
+        for(int i=0;i<index;i++){
+            node = node.next;
+        }
+        return node;
+    }
+}
+
+class Node{
+    public Node pre;
+
+    public int data;
+
+    public Node next;
+    public Node(int data){
+        this.data=data;
+    }
+
+}
