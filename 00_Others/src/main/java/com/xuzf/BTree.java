@@ -393,7 +393,7 @@ public class BTree {
     }
 
     /**
-     * 后序遍历
+     * 后序遍历  利用前序遍历 调换左右结点的入栈顺序 弹出改为压入另一个栈
      */
     static void postOrder(List<Integer> list, BTree root){
         if (root != null){
