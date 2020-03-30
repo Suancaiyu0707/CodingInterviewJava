@@ -1,5 +1,10 @@
 package com.xuzf;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+import java.util.concurrent.LinkedBlockingQueue;
+
 /**
  * Created with IntelliJ IDEA.
  * User: zhifang.xu
@@ -16,6 +21,13 @@ public class BTree {
     //结点的平衡因子
     int bf;
     public int level;
+
+    public static LinkedBlockingQueue<BTree> queue = new LinkedBlockingQueue<>(100);
+    public static Stack<BTree> stack = new Stack<>();
+    public static Stack<BTree> stack2 = new Stack<>();
+
+    public static ArrayList<Integer> BFSList = new ArrayList<>();
+    public static ArrayList<Integer> DFSList = new ArrayList<>();
 
     public BTree(int data, BTree left, BTree right) {
         this.data = data;
@@ -273,5 +285,132 @@ public class BTree {
         }
 
         System.out.println("T="+T);
+
+        List<Integer> result = new ArrayList<Integer>();
+//        middlerBinary(result,tree);
+        BinaryTreeNode.middlerBinary(result,T);
+        System.out.println("====中序遍历===");
+        System.out.println(result);
+
+        List<Integer> result2 = new ArrayList <Integer>();
+//        preBinary(result2,tree);
+        BinaryTreeNode.preBinary(result2,T);
+        System.out.println("====前序遍历===");
+        System.out.println(result2);
+
+        List<Integer> result3 = new ArrayList <Integer>();
+//        postBinary(result3,tree);
+
+        BinaryTreeNode.postBinary(result3,T);
+        System.out.println("====后序遍历===");
+        System.out.println(result3);
+
+        System.out.println("====广度优先遍历===");
+        BFS(T);
+        System.out.println(BFSList);
+        System.out.println("====深度优先遍历===");
+        DFS(T);
+        System.out.println(DFSList);
+
+        List<Integer> list = new ArrayList<>();
+        inOrder(list, T);
+        System.out.println("====中序遍历（非递归）===");
+        System.out.println(list);
+
+        List<Integer> postOrderList = new ArrayList<>();
+        postOrder(postOrderList, T);
+        System.out.println("====后序遍历（非递归）===");
+        System.out.println(postOrderList);
+
+    }
+
+    /**
+     * 广度优先遍历 层次遍历 利用队列先进先出
+     * @param root
+     */
+    static void BFS(BTree root){
+        if (root != null){
+           queue.offer(root);
+        }
+        while (!queue.isEmpty()){
+            BTree bTree = null;
+            try {
+                bTree = queue.take();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            BFSList.add(bTree.data);
+            if (bTree.left != null){
+                queue.offer(bTree.left);
+            }
+            if (bTree.right != null){
+                queue.offer(bTree.right);
+            }
+        }
+    }
+
+    /**
+     * 深度优先遍历 前序遍历 利用栈后进先出
+     * @param root
+     */
+    static void DFS(BTree root){
+        if (root != null){
+            stack.push(root);
+        }
+        while (!stack.isEmpty()){
+            BTree tree = stack.pop();
+            if (tree == null){
+                return;
+            }
+            DFSList.add(tree.data);
+            if (tree.right != null){
+                stack.push(tree.right);
+            }
+            if (tree.left != null){
+                stack.push(tree.left);
+            }
+        }
+    }
+
+    /**
+     * 中序遍历
+     * @param list
+     * @param root
+     */
+    static void inOrder(List<Integer> list, BTree root){
+        if (root == null){
+            return;
+        }
+        while (root != null || !stack.isEmpty()){
+            while (root != null){
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            list.add(root.data);
+            root = root.right;
+        }
+    }
+
+    /**
+     * 后序遍历
+     */
+    static void postOrder(List<Integer> list, BTree root){
+        if (root != null){
+            stack.push(root);
+        }
+        while (!stack.isEmpty()){
+            BTree tree = stack.pop();
+            stack2.push(tree);//压入栈2
+            if (tree.left != null){
+               stack.push(tree.left);
+            }
+            if (tree.right != null){
+                stack.push(tree.right);
+            }
+        }
+        while (!stack2.isEmpty()){
+            list.add(stack2.pop().data);
+        }
     }
 }
