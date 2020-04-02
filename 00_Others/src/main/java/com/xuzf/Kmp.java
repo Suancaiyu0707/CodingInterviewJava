@@ -11,7 +11,8 @@ public class Kmp {
 
     public static void main( String[] args ) {
         Kmp kmp = new Kmp();
-        int i = kmpMatch("abcaababaaabacacb","ababaaaba");
+//        int i = kmpMatch("abcaababaaabacacb","ababaaaba");
+        int i = indexKMP("abcaababaaabacacb","ababaaaba");
         System.out.println(i);
     }
     /***
@@ -75,5 +76,51 @@ public class Kmp {
         else
             return -1;
     }
+
+
+    static int[] getNextVal(char[] T){
+        int t_len = T.length;
+        int[] nextVal = new int[t_len];
+        int i=0, j=-1;
+        nextVal[0] = -1;
+        while (i<t_len-1){
+            if (j==-1 || T[i]==T[j]){
+                i++;
+                j++;
+                if (T[i]!=T[j]){
+                    nextVal[i] = j;
+                } else{
+                    nextVal[i]=nextVal[j];
+                }
+            } else{
+                j=nextVal[j];
+            }
+        }
+        return nextVal;
+    }
+
+    static int indexKMP(String s, String t){
+        char[] s_arr = s.toCharArray();
+        char[] t_arr = t.toCharArray();
+        int[] nextVal = getNextVal(t_arr);
+        int i=0, j=0;
+        while (i<s_arr.length && j<t_arr.length){
+            if (j==-1 || s_arr[i]==t_arr[j]){
+                i++;
+                j++;
+            }else {
+                //匹配失败，进行跳转
+                j=nextVal[j];
+            }
+        }
+        //匹配成功
+        if (j==t_arr.length){
+            return i-j;
+        } else {
+            return -1;
+        }
+    }
+
+
 
 }
