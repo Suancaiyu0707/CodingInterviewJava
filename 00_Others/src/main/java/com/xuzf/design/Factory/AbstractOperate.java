@@ -1,4 +1,9 @@
 package com.xuzf.design.Factory;
 
-public class AbstractOperate {
+public abstract class AbstractOperate {
+    public String firstNum;
+
+    public String secondNum;
+
+    public abstract double operate();
 }
