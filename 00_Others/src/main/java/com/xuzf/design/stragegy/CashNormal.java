@@ -5,7 +5,7 @@ package com.xuzf.design.stragegy;
  * @version 1.0
  * @Date 2020/4/3 7:10 上午
  */
-public class NormalCash extends CashSuper{
+public class CashNormal extends CashSuper{
 
     @Override
     public double totalPrice(double price) {
