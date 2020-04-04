@@ -7,4 +7,10 @@ package com.xuzf.design.proxy;
  * @Description
  */
 public interface Subject {
+
+    void sayGoodMorning();
+
+    void sayGoodAfternoon();
+
+    void sayGoodEvening();
 }

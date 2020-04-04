@@ -7,4 +7,18 @@ package com.xuzf.design.proxy;
  * @Description
  */
 public class Main {
+
+    public static void main(String[] args) {
+        User user = new User("某某某");
+
+        RealObject realObject = new RealObject(user);
+        //代理对象
+        ProxyObject proxyObject = new ProxyObject(realObject);
+
+        proxyObject.sayGoodMorning();
+
+        proxyObject.sayGoodAfternoon();
+
+        proxyObject.sayGoodEvening();
+    }
 }
