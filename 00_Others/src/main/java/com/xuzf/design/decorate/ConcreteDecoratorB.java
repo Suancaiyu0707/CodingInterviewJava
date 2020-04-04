@@ -6,12 +6,12 @@ package com.xuzf.design.decorate;
  * @Date 2020/4/4 4:54 下午
  * @Description
  */
-public class ConcreteDecoratorA extends Decorator{
+public class ConcreteDecoratorB extends Decorator{
     /***
      * 构造函数以父类为参数，用于传递包装对象
      * @param component
      */
-    public ConcreteDecoratorA(Component component) {
+    public ConcreteDecoratorB(Component component) {
         super(component);
     }
 
@@ -22,6 +22,6 @@ public class ConcreteDecoratorA extends Decorator{
     }
 
     private  void operateA(){
-        System.out.println("A：我要做点自己的事情");
+        System.out.println("B：我要做点自己的事情");
     }
 }

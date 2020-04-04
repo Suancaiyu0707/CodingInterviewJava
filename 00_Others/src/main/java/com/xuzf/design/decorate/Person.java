@@ -7,4 +7,28 @@ package com.xuzf.design.decorate;
  * @Description
  */
 public class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+    public Person() {
+    }
+
+
+    public void show(){
+        System.out.printf("装扮的 %s",this.name);
+        System.out.println();
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
 }
