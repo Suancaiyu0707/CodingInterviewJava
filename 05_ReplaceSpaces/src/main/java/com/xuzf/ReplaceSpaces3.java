@@ -11,6 +11,7 @@ public class ReplaceSpaces3 {
     public static void main(String[] args) {
         String s = "we are happy.";
         System.out.println(replaceBlank(s));
+
     }
 
     static String replaceBlank(String str){
