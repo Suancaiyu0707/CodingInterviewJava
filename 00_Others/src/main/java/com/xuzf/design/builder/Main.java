@@ -19,7 +19,6 @@ public class Main {
                 .createTyre()
                 .createsSteeringWheel();
         System.out.println(builder.car);
-
         Car car2=director.construct();
         System.out.println(car2);
     }
