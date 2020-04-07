@@ -22,7 +22,7 @@ public class RegularExpressionsMatching2 {
     public boolean match(char[] str, char[] pattern) {
         if (str == null || pattern == null)
             return false;
-        return matchCore(str, 0, pattern, 0);
+        return matchCore(str, pattern, 0,0);
     }
 
     /**
@@ -33,8 +33,8 @@ public class RegularExpressionsMatching2 {
      * @param indexOfPattern 模式上字符的索引
      * @return
      */
-    private boolean matchCore(char[] str, int indexOfStr,
-                              char[] pattern, int indexOfPattern) {
+    private boolean matchCore(char[] str, char[] pattern,
+                              int indexOfStr,int indexOfPattern) {
         //遍历到最后了
         if (indexOfStr == str.length && indexOfPattern == pattern.length) {
             return true;
@@ -62,47 +62,35 @@ public class RegularExpressionsMatching2 {
         //如果下一个字符是'*'
         if(indexOfPattern<pattern.length-1&&'*'==pattern[indexOfPattern+1]){
             boolean isMatch = true;
-            if((indexOfStr<str.length)&&str[indexOfPattern]==str[indexOfStr]){
-                // 如果 * 号代表1
-                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern+2);
-                if(!isMatch){
+            if((indexOfStr<str.length)
+                    &&(str[indexOfPattern]==str[indexOfStr]||pattern[indexOfPattern] == '.')){
+                // 如果 * 号代表1，如果下一位是*号，
+                //判断字符串的下一位跟*号后的那位是否相等，如果是的话，则忽略当前*
+                isMatch=matchCore(str,pattern,indexOfStr+1,indexOfPattern+2);
+                if(!isMatch){//如果当前的下一位和*号的下一位不匹配，则当前位和*号的下一位继续比较
                     //*号代表0
-                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
+                    isMatch=matchCore(str,pattern,indexOfStr,indexOfPattern+2);
                 }
-                if(!isMatch){
+                //如果*代表大于1
+                if(!isMatch){//如果当前位和*号的下一位继续比较，还是不匹配，则代表*号是0，则当前位的下一位和*号之前的那位进行比较
                     //*号代表多个，比如代表n的话，那它就是n=1+(n-1)
-                    isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern);
+                    isMatch=matchCore(str,pattern,indexOfStr+1,indexOfPattern);
                 }
                 return isMatch;
             }else if(indexOfStr<str.length&&pattern[indexOfPattern] == '.'){//如果pattern当前位置是 .
                 // 如果 * 号代表1
-                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern+2);
+                isMatch=matchCore(str,pattern,indexOfStr+1,indexOfPattern+2);
                 if(!isMatch){
                     //*号代表0
-                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
-                }
-                if(!isMatch){
-                    //*号代表0
-                    isMatch=matchCore(str,indexOfStr,pattern,indexOfPattern+2);
+                    isMatch=matchCore(str,pattern,indexOfStr,indexOfPattern+2);
                 }
                 //*号代表多个，比如代表n的话，那它就是n=1+(n-1)
-                isMatch=matchCore(str,indexOfStr+1,pattern,indexOfPattern);
+                isMatch=matchCore(str,pattern,indexOfStr+1,indexOfPattern);
                 return isMatch;
             }else{//当前字符和当前pattern对应位置不匹配，则 *当作0
                 //如果当前字符串已经到最后一位了，则 *也会被当作0
-                return matchCore(str, indexOfStr, pattern, indexOfPattern + 2);
+                return matchCore(str,  pattern, indexOfStr,indexOfPattern + 2);
             }
-
-//            //如果模式中的当前字符是一样的
-//            if((indexOfStr < str.length&&pattern[indexOfPattern]==str[indexOfStr])
-//                    ||(indexOfStr < str.length && pattern[indexOfPattern] == '.')){
-//                return
-//                        matchCore(str,indexOfStr+1,pattern,indexOfPattern+2)//ab和ab,所以这里会先把*代表1个来递归
-//                        ||matchCore(str,indexOfStr+1,pattern,indexOfPattern)//aaab和a*b。走到这边，说明*代表1不好使，要代表多个
-//                        ||matchCore(str,indexOfStr,pattern,indexOfPattern+2);//*被当成0来对待
-//            }else {
-//                return matchCore(str, indexOfStr, pattern, indexOfPattern + 2);
-//            }
         }
         //走到这边，说明下一位不是*
         if (indexOfStr < str.length
@@ -111,7 +99,7 @@ public class RegularExpressionsMatching2 {
                         || pattern[indexOfPattern] == '.'
         )
                 ) {
-            return matchCore(str, indexOfStr + 1, pattern, indexOfPattern + 1);
+            return matchCore(str,  pattern, indexOfStr + 1,indexOfPattern + 1);
         }
 
         return false;

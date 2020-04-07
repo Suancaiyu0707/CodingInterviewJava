@@ -30,14 +30,15 @@ public class StringPathInMatrix2 {
      * @param rows 数组行数
      * @param col 当前字符所属的列
      * @param cols 数组列数
-     * @param pathLengh 当前需要匹配的字符在字符串里的位置
+     * @param pathLength 当前需要匹配的字符在字符串里的位置
      * @param str 字符串
      * @param visted 遍历过的字符
      * @return
      */
     public boolean hashPathCore(char[][] matrix,int row,int rows,
                                 int col,int cols,
-                                int pathLengh,String str,
+                                int pathLength,
+                                String str,
                                 boolean[][] visted){
         if(str==null||"".equals(str)){
             return true;
@@ -53,13 +54,13 @@ public class StringPathInMatrix2 {
         }
 
         //判断当前字符是不是要查找的字符
-        boolean isMatch = matrix[row][col]==str.toCharArray()[pathLengh];
+        boolean isMatch = matrix[row][col]==str.toCharArray()[pathLength];
         if(!isMatch){
             return false;
         }
-        pathLengh++;
+        pathLength++;
         //如果匹配，且长度已经满足了，直接返回true
-        if(pathLengh==str.length()){
+        if(pathLength==str.length()){
             return true;
         }
         //记录已被匹配过的字符
@@ -69,15 +70,15 @@ public class StringPathInMatrix2 {
          */
         if(isMatch){
             isMatch=
-                    hashPathCore(matrix,row+1,rows,col,cols,pathLengh,str,visted)
-                    ||hashPathCore(matrix,row,rows,col+1,cols,pathLengh,str,visted)
-                    ||hashPathCore(matrix,row-1,rows,col,cols,pathLengh,str,visted)
-                    ||hashPathCore(matrix,row,rows,col-1,cols,pathLengh,str,visted);
+                    hashPathCore(matrix,row+1,rows,col,cols,pathLength,str,visted)
+                    ||hashPathCore(matrix,row,rows,col+1,cols,pathLength,str,visted)
+                    ||hashPathCore(matrix,row-1,rows,col,cols,pathLength,str,visted)
+                    ||hashPathCore(matrix,row,rows,col-1,cols,pathLength,str,visted);
         }
         //如果下一个字符不匹配，则要回溯，并将访问记录的对应位置还原回去
         if(!isMatch){
             visted[row][col]=false;
-            pathLengh--;
+            pathLength  --;
         }
         return isMatch;
     }

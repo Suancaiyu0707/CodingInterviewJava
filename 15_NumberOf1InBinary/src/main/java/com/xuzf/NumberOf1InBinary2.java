@@ -72,13 +72,12 @@ public class NumberOf1InBinary2 {
 
         int count =0;
         int base =1;//00000000000000000001
-        int bit=1;
+
         while(base!=0){
             //如果当前位是1的话，则返回值肯定不是0
             if((number&base)!=0){
                 count++;
             }
-            bit++;
             base=base<<1;//00000000000000000010
 
         }

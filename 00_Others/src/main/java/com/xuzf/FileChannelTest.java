@@ -32,6 +32,7 @@ public class FileChannelTest {
             buffer = ByteBuffer.wrap(buf);
             out.flush();
             channel.write(buffer);
+            channel.force(true);
         } catch (Exception e) {
             System.out.println("下载文件失败");
         } finally {

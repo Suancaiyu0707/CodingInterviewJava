@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingDeque;
  * Description: No Description
  * 贝尔曼-福德算法
  */
-public class GraphBFSWithWeight {
+public class   GraphBFSWithWeight {
 
 
     public static void main( String[] args ) {
