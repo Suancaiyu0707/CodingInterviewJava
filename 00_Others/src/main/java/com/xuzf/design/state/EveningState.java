@@ -9,7 +9,7 @@ package com.xuzf.design.state;
 public class EveningState extends State{
     @Override
     public void handler(Work work) {
-        if(work.isFinish()){
+        if(work.isFinish()){//如果完成任务了，直接下班
             work.setState(new RestState());
             work.writeProgram();
         }else {
