@@ -14,6 +14,13 @@ import java.nio.channels.FileChannel;
 public class FileChannelTest {
 
     public static void main( String[] args ) throws IOException {
+        FileChannelTest fileChannelTest = new FileChannelTest();
+//        fileChannelTest.fileCopyWithFileChannel
+//                (new File("/Users/shoutenshi/Desktop/a.txt"), new File("/Users/shoutenshi/Desktop/c.txt"));
+
+        InputStream in = new FileInputStream("/Users/shoutenshi/Desktop/7cde6e95-f4c3-418e-8a38-e6f67c3a3804.pdf");
+        fileChannelTest.test("/Users/shoutenshi/Desktop/09e521bd-d807-429a-931e-172c6389f432/test.pdf", in);
+
 
     }
 
