@@ -54,7 +54,7 @@ public class MergeSortedLists2 {
         ListNode cursor1=head1;
         ListNode cursor2=head2;
         //两个链表都遍历完才结束
-        while(cursor1!=null&&cursor2!=null){
+        while(cursor1!=null||cursor2!=null){
             if(cursor1==null){//如果链表1遍历结束，则直接把剩下的cursor2全加到mergedNode末尾即可
                 mergedNode.next=cursor2;
                 break;

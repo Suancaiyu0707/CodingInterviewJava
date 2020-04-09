@@ -44,11 +44,6 @@ public class SequenceOfBST2 {
                 return false;
             }
         }
-        boolean result = false;
-        //存在左子树
-//        if(i>beginIndex){
-//            result=
-//        }
         //递归检查左子树和右子树
         return verifySequenceOfBST(sequence,beginIndex,i-1)
                 &&verifySequenceOfBST(sequence,i,endIndex-1);
