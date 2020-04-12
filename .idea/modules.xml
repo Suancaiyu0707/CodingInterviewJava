@@ -12,6 +12,39 @@
       <module fileurl="file://$PROJECT_DIR$/07_ConstructBinaryTree/07_ConstructBinaryTree.iml" filepath="$PROJECT_DIR$/07_ConstructBinaryTree/07_ConstructBinaryTree.iml" />
       <module fileurl="file://$PROJECT_DIR$/08_NextNodeInBinaryTrees/08_NextNodeInBinaryTrees.iml" filepath="$PROJECT_DIR$/08_NextNodeInBinaryTrees/08_NextNodeInBinaryTrees.iml" />
       <module fileurl="file://$PROJECT_DIR$/09_QueueWithTwoStacks/09_QueueWithTwoStacks.iml" filepath="$PROJECT_DIR$/09_QueueWithTwoStacks/09_QueueWithTwoStacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_Fibonacci/10_Fibonacci.iml" filepath="$PROJECT_DIR$/10_Fibonacci/10_Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_MinNumberInRotatedArray/11_MinNumberInRotatedArray.iml" filepath="$PROJECT_DIR$/11_MinNumberInRotatedArray/11_MinNumberInRotatedArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_StringPathInMatrix/12_StringPathInMatrix.iml" filepath="$PROJECT_DIR$/12_StringPathInMatrix/12_StringPathInMatrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13_RobotMove/13_RobotMove.iml" filepath="$PROJECT_DIR$/13_RobotMove/13_RobotMove.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14_CuttingRope/14_CuttingRope.iml" filepath="$PROJECT_DIR$/14_CuttingRope/14_CuttingRope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_NumberOf1InBinary/15_NumberOf1InBinary.iml" filepath="$PROJECT_DIR$/15_NumberOf1InBinary/15_NumberOf1InBinary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16_Power/16_Power.iml" filepath="$PROJECT_DIR$/16_Power/16_Power.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17_Print1ToMaxOfNDigits/17_Print1ToMaxOfNDigits.iml" filepath="$PROJECT_DIR$/17_Print1ToMaxOfNDigits/17_Print1ToMaxOfNDigits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18_DeleteNodeInList/18_DeleteNodeInList.iml" filepath="$PROJECT_DIR$/18_DeleteNodeInList/18_DeleteNodeInList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19_RegularExpressionsMatching/19_RegularExpressionsMatching.iml" filepath="$PROJECT_DIR$/19_RegularExpressionsMatching/19_RegularExpressionsMatching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20_NumericStrings/20_NumericStrings.iml" filepath="$PROJECT_DIR$/20_NumericStrings/20_NumericStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21_ReorderArray/21_ReorderArray.iml" filepath="$PROJECT_DIR$/21_ReorderArray/21_ReorderArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/22_KthNodeFromEnd/22_KthNodeFromEnd.iml" filepath="$PROJECT_DIR$/22_KthNodeFromEnd/22_KthNodeFromEnd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/23_EntryNodeInListLoop/23_EntryNodeInListLoop.iml" filepath="$PROJECT_DIR$/23_EntryNodeInListLoop/23_EntryNodeInListLoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/24_ReverseList/24_ReverseList.iml" filepath="$PROJECT_DIR$/24_ReverseList/24_ReverseList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/25_MergeSortedLists/25_MergeSortedLists.iml" filepath="$PROJECT_DIR$/25_MergeSortedLists/25_MergeSortedLists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/26_SubstructureInTree/26_SubstructureInTree.iml" filepath="$PROJECT_DIR$/26_SubstructureInTree/26_SubstructureInTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/27_MirrorOfBinaryTree/27_MirrorOfBinaryTree.iml" filepath="$PROJECT_DIR$/27_MirrorOfBinaryTree/27_MirrorOfBinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/28_SymmetricalBinaryTree/28_SymmetricalBinaryTree.iml" filepath="$PROJECT_DIR$/28_SymmetricalBinaryTree/28_SymmetricalBinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/29_PrintMatrix/29_PrintMatrix.iml" filepath="$PROJECT_DIR$/29_PrintMatrix/29_PrintMatrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/30_MinInStack/30_MinInStack.iml" filepath="$PROJECT_DIR$/30_MinInStack/30_MinInStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/31_StackPushPopOrder/31_StackPushPopOrder.iml" filepath="$PROJECT_DIR$/31_StackPushPopOrder/31_StackPushPopOrder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/32_PrintTreeFromTopToBottom/32_PrintTreeFromTopToBottom.iml" filepath="$PROJECT_DIR$/32_PrintTreeFromTopToBottom/32_PrintTreeFromTopToBottom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/33_SquenceOfBST/33_SquenceOfBST.iml" filepath="$PROJECT_DIR$/33_SquenceOfBST/33_SquenceOfBST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/34_PathInTree/34_PathInTree.iml" filepath="$PROJECT_DIR$/34_PathInTree/34_PathInTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/35_CopyComplexList/35_CopyComplexList.iml" filepath="$PROJECT_DIR$/35_CopyComplexList/35_CopyComplexList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/36_ConvertBinarySearchTree/36_ConvertBinarySearchTree.iml" filepath="$PROJECT_DIR$/36_ConvertBinarySearchTree/36_ConvertBinarySearchTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/37_SerializeBinaryTrees/37_SerializeBinaryTrees.iml" filepath="$PROJECT_DIR$/37_SerializeBinaryTrees/37_SerializeBinaryTrees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/38_StringPermutation/38_StringPermutation.iml" filepath="$PROJECT_DIR$/38_StringPermutation/38_StringPermutation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/39_MoreThanHalfNumber/39_MoreThanHalfNumber.iml" filepath="$PROJECT_DIR$/39_MoreThanHalfNumber/39_MoreThanHalfNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/40_KLeastNumbers/40_KLeastNumbers.iml" filepath="$PROJECT_DIR$/40_KLeastNumbers/40_KLeastNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/41_StreamMedian/41_StreamMedian.iml" filepath="$PROJECT_DIR$/41_StreamMedian/41_StreamMedian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/42_GreatestSumOfSubarrays/42_GreatestSumOfSubarrays.iml" filepath="$PROJECT_DIR$/42_GreatestSumOfSubarrays/42_GreatestSumOfSubarrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" filepath="$PROJECT_DIR$/43_NumberOf1/43_NumberOf1.iml" />
       <module fileurl="file://$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" filepath="$PROJECT_DIR$/44_DigitsInSequence/44_DigitsInSequence.iml" />
       <module fileurl="file://$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" filepath="$PROJECT_DIR$/45_SortArrayForMinNumber/45_SortArrayForMinNumber.iml" />

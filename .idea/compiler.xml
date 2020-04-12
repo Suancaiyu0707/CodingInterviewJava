@@ -6,39 +6,72 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="49_UglyNumber" />
-        <module name="47_MaxValueOfGifts" />
+        <module name="41_StreamMedian" />
         <module name="05_ReplaceSpaces" />
-        <module name="48_LongestSubstringWithoutDup" />
-        <module name="06_PrintListInReversedOrder" />
-        <module name="46_TranslateNumbersToStrings" />
-        <module name="09_QueueWithTwoStacks" />
-        <module name="51_InversePairs" />
-        <module name="08_NextNodeInBinaryTrees" />
-        <module name="04_FindInPartiallySortedMatrix" />
-        <module name="54_KthNodeInBST" />
-        <module name="07_ConstructBinaryTree" />
-        <module name="50_FirstCharacterInStream" />
-        <module name="52_FirstCommonNodesInLists" />
-        <module name="45_SortArrayForMinNumber" />
-        <module name="58_ReverseWordsInSentence" />
-        <module name="43_NumberOf1" />
         <module name="57_NumbersWithSum" />
+        <module name="09_QueueWithTwoStacks" />
+        <module name="46_TranslateNumbersToStrings" />
+        <module name="37_SerializeBinaryTrees" />
+        <module name="21_ReorderArray" />
+        <module name="26_SubstructureInTree" />
+        <module name="36_ConvertBinarySearchTree" />
+        <module name="43_NumberOf1" />
+        <module name="51_InversePairs" />
+        <module name="12_StringPathInMatrix" />
+        <module name="28_SymmetricalBinaryTree" />
         <module name="01_Leetcode" />
-        <module name="02_Structs" />
-        <module name="56_NumbersAppearOnce" />
-        <module name="59_MaxInSlidingWindow" />
-        <module name="53_NumberOfK" />
-        <module name="00_Others" />
-        <module name="03_DuplicationInArray" />
         <module name="44_DigitsInSequence" />
-        <module name="CodingInterviewJava" />
-        <module name="55_TreeDepth" />
+        <module name="04_FindInPartiallySortedMatrix" />
+        <module name="13_RobotMove" />
+        <module name="15_NumberOf1InBinary" />
+        <module name="50_FirstCharacterInStream" />
+        <module name="45_SortArrayForMinNumber" />
         <module name="60_DicesProbability" />
+        <module name="53_NumberOfK" />
+        <module name="25_MergeSortedLists" />
+        <module name="02_Structs" />
+        <module name="00_Others" />
+        <module name="40_KLeastNumbers" />
+        <module name="14_CuttingRope" />
+        <module name="31_StackPushPopOrder" />
+        <module name="18_DeleteNodeInList" />
+        <module name="59_MaxInSlidingWindow" />
+        <module name="22_KthNodeFromEnd" />
+        <module name="42_GreatestSumOfSubarrays" />
+        <module name="23_EntryNodeInListLoop" />
+        <module name="58_ReverseWordsInSentence" />
+        <module name="16_Power" />
+        <module name="30_MinInStack" />
+        <module name="11_MinNumberInRotatedArray" />
+        <module name="03_DuplicationInArray" />
+        <module name="55_TreeDepth" />
+        <module name="48_LongestSubstringWithoutDup" />
+        <module name="32_PrintTreeFromTopToBottom" />
+        <module name="10_Fibonacci" />
+        <module name="52_FirstCommonNodesInLists" />
+        <module name="56_NumbersAppearOnce" />
+        <module name="39_MoreThanHalfNumber" />
+        <module name="54_KthNodeInBST" />
+        <module name="20_NumericStrings" />
+        <module name="24_ReverseList" />
+        <module name="34_PathInTree" />
+        <module name="33_SquenceOfBST" />
+        <module name="17_Print1ToMaxOfNDigits" />
+        <module name="27_MirrorOfBinaryTree" />
+        <module name="35_CopyComplexList" />
+        <module name="19_RegularExpressionsMatching" />
+        <module name="49_UglyNumber" />
+        <module name="07_ConstructBinaryTree" />
+        <module name="08_NextNodeInBinaryTrees" />
+        <module name="38_StringPermutation" />
+        <module name="29_PrintMatrix" />
+        <module name="06_PrintListInReversedOrder" />
+        <module name="CodingInterviewJava" />
+        <module name="47_MaxValueOfGifts" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="00_Others" target="6" />
+      <module name="00_Others" target="8" />
       <module name="01_Leetcode" target="1.8" />
       <module name="02_Structs" target="1.8" />
       <module name="03_DuplicationInArray" target="1.8" />
@@ -48,6 +81,39 @@
       <module name="07_ConstructBinaryTree" target="1.8" />
       <module name="08_NextNodeInBinaryTrees" target="1.8" />
       <module name="09_QueueWithTwoStacks" target="1.8" />
+      <module name="10_Fibonacci" target="1.8" />
+      <module name="11_MinNumberInRotatedArray" target="1.8" />
+      <module name="12_StringPathInMatrix" target="1.8" />
+      <module name="13_RobotMove" target="1.8" />
+      <module name="14_CuttingRope" target="1.8" />
+      <module name="15_NumberOf1InBinary" target="1.8" />
+      <module name="16_Power" target="1.8" />
+      <module name="17_Print1ToMaxOfNDigits" target="1.8" />
+      <module name="18_DeleteNodeInList" target="1.8" />
+      <module name="19_RegularExpressionsMatching" target="1.8" />
+      <module name="20_NumericStrings" target="1.8" />
+      <module name="21_ReorderArray" target="1.8" />
+      <module name="22_KthNodeFromEnd" target="1.8" />
+      <module name="23_EntryNodeInListLoop" target="1.8" />
+      <module name="24_ReverseList" target="1.8" />
+      <module name="25_MergeSortedLists" target="1.8" />
+      <module name="26_SubstructureInTree" target="1.8" />
+      <module name="27_MirrorOfBinaryTree" target="1.8" />
+      <module name="28_SymmetricalBinaryTree" target="1.8" />
+      <module name="29_PrintMatrix" target="1.8" />
+      <module name="30_MinInStack" target="1.8" />
+      <module name="31_StackPushPopOrder" target="1.8" />
+      <module name="32_PrintTreeFromTopToBottom" target="1.8" />
+      <module name="33_SquenceOfBST" target="1.8" />
+      <module name="34_PathInTree" target="1.8" />
+      <module name="35_CopyComplexList" target="1.8" />
+      <module name="36_ConvertBinarySearchTree" target="1.8" />
+      <module name="37_SerializeBinaryTrees" target="1.8" />
+      <module name="38_StringPermutation" target="1.8" />
+      <module name="39_MoreThanHalfNumber" target="1.8" />
+      <module name="40_KLeastNumbers" target="1.8" />
+      <module name="41_StreamMedian" target="1.8" />
+      <module name="42_GreatestSumOfSubarrays" target="1.8" />
       <module name="43_NumberOf1" target="1.8" />
       <module name="44_DigitsInSequence" target="1.8" />
       <module name="45_SortArrayForMinNumber" target="6" />
@@ -68,5 +134,8 @@
       <module name="60_DicesProbability" target="1.8" />
       <module name="CodingInterviewJava" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
   </component>
 </project>
